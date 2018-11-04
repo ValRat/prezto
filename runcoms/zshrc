@@ -11,3 +11,22 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias g="jump"
+alias l="showmarks"
+alias zathura="zathura --fork "
+
+# ROS Related paths
+source /opt/ros/kinetic/setup.sh
+alias clion="clion & disown && exit"
+alias rviz="rviz & disown && exit"
+alias rqt="rqt & disown && exit"
+alias catkin="catkin "
+alias run_tests="run_tests && catkin_test_results"
+export EDITOR='vim'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+COMPLETION_WAITING_DOTS="true"
+export GAZEBO_MODEL_PATH=/home/valerian/Snowbots/Snowflake/setup_scripts/../src/sb_gazebo/models:
+export GAZEBO_PLUGIN_PATH=/home/valerian/Snowbots/Snowflake/setup_scripts/../src/sb_gazebo/lib:
+export GAZEBO_RESOURCE_PATH=/home/valerian/Snowbots/Snowflake/setup_scripts/../src/sb_gazebo/models:
